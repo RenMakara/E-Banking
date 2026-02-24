@@ -20,6 +20,8 @@ public record CreateCustomerRequest(
         Kyc kyc,
         @NotNull
         Address address,
+        @NotNull
+        Contact contact,
         @NotBlank
         String phoneNumber,
         @NotNull

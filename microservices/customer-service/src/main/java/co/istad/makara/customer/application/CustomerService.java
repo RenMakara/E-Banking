@@ -1,4 +1,4 @@
-package co.istad.makara.customer.application.dto;
+package co.istad.makara.customer.application;
 
 import co.istad.makara.customer.application.dto.create.CreateCustomerRequest;
 import co.istad.makara.customer.application.dto.create.CreateCustomerResponse;

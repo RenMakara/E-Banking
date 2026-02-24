@@ -4,9 +4,9 @@ axon:
     enabled: false
   #
   serializer:
-    general: jackson3
-    events: jackson3
-    messages: jackson3
+    general: jackson
+    events: jackson
+    messages: jackson
 
 server:
   port: 20261
@@ -21,10 +21,10 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
-    show-sql: true
+    show-sql: false
     properties:
       hibernate:
-        format_sql: true
+        format_sql:  false
   profiles:
     active: dev
   config:

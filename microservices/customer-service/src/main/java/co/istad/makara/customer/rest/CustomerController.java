@@ -1,6 +1,6 @@
 package co.istad.makara.customer.rest;
 
-import co.istad.makara.customer.application.dto.CustomerService;
+import co.istad.makara.customer.application.CustomerService;
 import co.istad.makara.customer.application.dto.create.CreateCustomerRequest;
 import co.istad.makara.customer.application.dto.create.CreateCustomerResponse;
 import co.istad.makara.customer.application.dto.update.ChangePhoneNumberRequest;
