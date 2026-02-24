@@ -28,7 +28,7 @@ spring:
           default-label: main
           search-paths: "/**"
           # Native config ---------------
-        native:
-          search-locations:
-            - file:D:\ITP_SPRING_MICROSERVICE\itp-microservice\itp-config-repo\
-            - file:D:\ITP_SPRING_MICROSERVICE\itp-microservice\itp-config-repo\{application}\
+#        native:
+#          search-locations:
+#            - file:D:\ITP_SPRING_MICROSERVICE\itp-microservice\itp-config-repo\
+#            - file:D:\ITP_SPRING_MICROSERVICE\itp-microservice\itp-config-repo\{application}\

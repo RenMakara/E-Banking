@@ -1,4 +1,4 @@
-package co.istad.makara.customer_service;
+package co.istad.makara.customer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
