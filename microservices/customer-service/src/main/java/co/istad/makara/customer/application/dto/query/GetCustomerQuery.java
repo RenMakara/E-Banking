@@ -7,5 +7,4 @@ public record GetCustomerQuery(
         int pageNumber,
         int pageSize
 ) {
-
 }

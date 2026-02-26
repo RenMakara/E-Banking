@@ -48,6 +48,9 @@ public class CustomerQueryHandler {
                 .pageSize(customerPage.getSize())
                 .totalElements(customerPage.getTotalElements())
                 .totalPages(customerPage.getTotalPages())
+                .last(customerPage.isLast())
+                .next(customerPage.hasNext())
+                .previous(customerPage.hasPrevious())
                 .build();
     }
 

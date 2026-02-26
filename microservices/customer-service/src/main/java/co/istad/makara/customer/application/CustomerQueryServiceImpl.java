@@ -3,16 +3,22 @@ import co.istad.makara.customer.application.dto.query.CustomerPageResponse;
 import co.istad.makara.customer.application.dto.query.GetCustomerQuery;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.axonframework.eventsourcing.eventstore.EventStore;
+import org.axonframework.messaging.Message;
 import org.axonframework.messaging.responsetypes.ResponseTypes;
 import org.axonframework.queryhandling.QueryGateway;
 
 import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
 @Slf4j
 public class CustomerQueryServiceImpl implements CustomerQueryService{
 
+    private final EventStore eventStore;
     private final QueryGateway queryGateway;
 
     @Override
@@ -21,6 +27,15 @@ public class CustomerQueryServiceImpl implements CustomerQueryService{
                 new GetCustomerQuery(pageNumber, pageSize),
                 ResponseTypes.instanceOf(CustomerPageResponse.class)
         ).join();
+    }
+
+    @Override
+    public List<?> getCustomerHistory(UUID customerId) {
+        return eventStore.readEvents(customerId.toString())
+                .asStream()
+                .map(Message::getPayload)
+                .toList();
+
     }
 //    @Override
 //    public CustomPageResponse getAllCustomers(int pageNumber, int pageSize){

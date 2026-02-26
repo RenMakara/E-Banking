@@ -50,7 +50,7 @@ public class CustomerListener {
         log.info("on CustomerPhoneNumberChangedEvent: {}", customerPhoneNumberChangedEvent);
         // 1. Find existing customer
         CustomerEntity customerEntity = customerRepository
-                .findById(customerPhoneNumberChangedEvent.customerId().value())
+                .findById(customerPhoneNumberChangedEvent.customerId().getValue())
                 .orElseThrow(() ->
                         new ResponseStatusException(
                                 HttpStatus.NOT_FOUND,

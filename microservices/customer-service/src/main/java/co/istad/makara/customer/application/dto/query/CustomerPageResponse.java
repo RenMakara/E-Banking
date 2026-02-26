@@ -10,6 +10,9 @@ public record CustomerPageResponse(
         int currentPage,
         int pageSize,
         long totalElements,
-        int totalPages
+        int totalPages,
+        boolean last,
+        boolean next,
+        boolean previous
 ) {
 }

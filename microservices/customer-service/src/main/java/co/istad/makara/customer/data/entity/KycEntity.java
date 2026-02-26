@@ -15,7 +15,6 @@ import java.util.UUID;
 public class KycEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
     private UUID kycId;
 
     private String type;

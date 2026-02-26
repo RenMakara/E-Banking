@@ -15,7 +15,6 @@ import java.util.UUID;
 public class AddressEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
     private UUID addressId;
 
     private String line;

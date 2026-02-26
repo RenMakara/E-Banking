@@ -15,7 +15,6 @@ import java.util.UUID;
 public class ContactEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
     private UUID contactId;
 
     private String type;

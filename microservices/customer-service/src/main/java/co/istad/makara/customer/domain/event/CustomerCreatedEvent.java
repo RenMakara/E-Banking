@@ -1,6 +1,7 @@
 package co.istad.makara.customer.domain.event;
 
 //import co.istad.makara.common.domain.valueobject.CustomerId;
+
 import co.istad.makara.common.domain.valueobject.CustomerId;
 import co.istad.makara.common.domain.valueobject.CustomerSegmentId;
 import co.istad.makara.customer.domain.valueobject.*;
